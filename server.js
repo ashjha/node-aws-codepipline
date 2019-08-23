@@ -13,11 +13,11 @@ app.get('/', (req, res) => {
     res.render('index', {page:'Home', menuId:'home'});
 })
 
-router.get('/about', function (req, res, next) {
+app.get('/about', function (req, res, next) {
     res.render('about', { page: 'About Us', menuId: 'about' });
 });
 
-router.get('/contact', function (req, res, next) {
+app.get('/contact', function (req, res, next) {
     res.render('contact', { page: 'Contact Us', menuId: 'contact' });
 });
 
