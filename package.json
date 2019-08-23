@@ -1,0 +1,22 @@
+{
+  "name": "aws-codepipline",
+  "version": "1.0.0",
+  "description": "It is for connecting with aws beanstack through code pipeline",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashjha/node-aws-codepipline.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashjha/node-aws-codepipline/issues"
+  },
+  "homepage": "https://github.com/ashjha/node-aws-codepipline#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
