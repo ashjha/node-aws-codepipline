@@ -9,7 +9,9 @@ app.set('view engine', 'ejs');
 // set path for static assets
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', (req, res) => res.send('Hello World!'))
+app.get('/', (req, res) => {
+    res.render('index', {page:'Home', menuId:'home'});
+})
 app.get('/health', (req, res) => res.status(200).send('Good!'))
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
