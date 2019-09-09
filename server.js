@@ -32,32 +32,33 @@ app.get('/contact', function (req, res, next) {
 });
 
 app.post('/vote', (req, res) => {
+    console.log(new Date())
     console.log(req.body);
+    res.render('index', {page:'Singing star', menuId:'home'});
 
+    // var transporter = nodemailer.createTransport({
+    //     service: 'gmail',
+    //     auth: {
+    //         user: 'hi.ashu143@gmail.com',
+    //         pass: 'ashuashu@'
+    //     }
+    // });
 
-    var transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: 'hi.ashu143@gmail.com',
-            pass: 'ashuashu@'
-        }
-    });
+    // var mailOptions = {
+    //     from: 'hi.ashu143@gmail.com',
+    //     to: 'ashutosh131991@gmail.com',
+    //     subject: 'Murga!!!',
+    //     text: JSON.stringify(req.body)
+    // };
 
-    var mailOptions = {
-        from: 'hi.ashu143@gmail.com',
-        to: 'ashutosh131991@gmail.com',
-        subject: 'Murga!!!',
-        text: JSON.stringify(req.body)
-    };
-
-    transporter.sendMail(mailOptions, function (error, info) {
-        if (error) {
-            console.log(error);
-        } else {
-            console.log('Email sent: ' + info.response);
-        }
-        res.render('index', {page:'Singing star', menuId:'home'});
-    });
+    // transporter.sendMail(mailOptions, function (error, info) {
+    //     if (error) {
+    //         console.log(error);
+    //     } else {
+    //         console.log('Email sent: ' + info.response);
+    //     }
+    //     res.render('index', {page:'Singing star', menuId:'home'});
+    // });
 });
 
 app.get('/health', (req, res) => res.status(200).send('Good!'))
